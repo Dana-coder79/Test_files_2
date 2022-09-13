@@ -1,0 +1,10 @@
+while result == -1.0 or New_operation == True:
+    BTC_rate = float(input("Please, enter bitcoin to dollar exchange rate in form xxxxx.xx"))
+    Dollars_amount = float(input("Please, enter how much dollars do you have in form xxxxxxxxxx.xx"))
+    if (BTC_rate <= 0.0) or (Dollars_amount < 0.0) or (isnumeric(int(BTC_rate)) == False) or (isnumeric(int(Dollars_amount)) == False):
+        result = -1.0
+        print("You enter incorrect data. Please, try again")
+    else:
+        result = Dollars_amount/BTC_rate
+        print( f"You can buy {result} BTC")
+        New_operation = bool(print("If you want to repeat procedure, please click any key"))
